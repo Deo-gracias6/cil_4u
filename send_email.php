@@ -190,8 +190,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'adeogracias323@gmail.com';
-        $mail->Password = 'vbhwnsaklryubllp';
+        $mail->Username =  $_ENV['GMAIL_USERNAME'];
+        $mail->Password = $_ENV['GMAIL_PASSWORD'];
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
         $mail->Port = 465;
         $mail->CharSet = 'UTF-8';
